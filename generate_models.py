@@ -26,8 +26,6 @@ def get_type(type_str):
         ret_type = 'BIGINT(' + unsigned + ')'
     elif type_str.find('varchar') > -1:
         ret_type = 'VARCHAR(' + str(length) + ')'
-    elif type_str.find('integer') > -1:
-        ret_type = 'INTEGER(' + unsigned + ')'
     elif type_str.find('datetime') > -1:
         ret_type = 'DATETIME()'
     elif type_str.find('char') > -1:
@@ -38,6 +36,8 @@ def get_type(type_str):
         ret_type = 'TINYINT(' + unsigned + ')'
     elif type_str.find('time') > -1:
         ret_type = 'TIME()'
+    elif type_str.find('int') > -1:
+        ret_type = 'INTEGER(' + unsigned + ')'
     return ret_type
 
 
